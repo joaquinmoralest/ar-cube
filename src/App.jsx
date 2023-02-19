@@ -1,13 +1,13 @@
 import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import { ARButton, Controllers, Hands, Interactive, XR as Xr } from '@react-three/xr'
+import { ARButton, Controllers, Interactive, XR as Xr } from '@react-three/xr'
 import { useRef } from 'react'
 
 const Cube = () => {
   const ref = useRef()
   return (
     <mesh ref={ref} position={[0, 0, 0]}>
-      <boxGeometry args={[1, 1, 1]} />
+      <boxGeometry args={[0.5, 0.5, 0.5]} />
       <meshStandardMaterial attach='material' color='orange' />
     </mesh>
   )
@@ -18,16 +18,15 @@ function App () {
     <>
       <ARButton />
       <Canvas>
-        <ambientLight />
-        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
         <Xr>
-          <Controllers />
-          <Hands />
           <Interactive>
+            <ambientLight />
+            <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+            <Controllers />
             <Cube />
+            <OrbitControls />
           </Interactive>
         </Xr>
-        <OrbitControls />
       </Canvas>
     </>
   )
