@@ -18,15 +18,15 @@ function App () {
     <>
       <ARButton />
       <Canvas>
+        <Stars />
+        <ambientLight />
+        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
         <Xr>
           <Controllers />
-          <Hands />
-          <Stars />
-          <ambientLight />
-          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+          {/* <Hands /> */}
           <Cube />
-          <OrbitControls />
         </Xr>
+        <OrbitControls />
       </Canvas>
     </>
   )
