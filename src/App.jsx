@@ -24,7 +24,11 @@ function App () {
         <Xr>
           <Controllers />
           {/* <Hands /> */}
-          <Cube />
+          {/* <Cube /> */}
+          <mesh>
+            <boxGeometry />
+            <meshBasicMaterial color='blue' />
+          </mesh>
         </Xr>
         <OrbitControls />
       </Canvas>
