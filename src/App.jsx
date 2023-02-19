@@ -18,7 +18,7 @@ function App () {
     <>
       <ARButton />
       <Canvas>
-        <Stars />
+        {/* <Stars /> */}
         <ambientLight />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
         <Xr>
