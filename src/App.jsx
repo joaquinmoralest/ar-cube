@@ -1,6 +1,6 @@
 import { OrbitControls, Stars } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import { ARButton, XR as Xr } from '@react-three/xr'
+import { ARButton, Controllers, Hands, XR as Xr } from '@react-three/xr'
 import { useRef } from 'react'
 
 const Cube = () => {
@@ -19,6 +19,8 @@ function App () {
       <ARButton />
       <Canvas>
         <Xr>
+          <Controllers />
+          <Hands />
           <Stars />
           <ambientLight />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
