@@ -6,8 +6,8 @@ import { useRef } from 'react'
 const Cube = () => {
   const ref = useRef()
   return (
-    <mesh ref={ref} position={[0, 0, 0]}>
-      <boxGeometry args={[0.5, 0.5, 0.5]} />
+    <mesh ref={ref} position={[0, 0, -5]}>
+      <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial attach='material' color='orange' />
     </mesh>
   )
